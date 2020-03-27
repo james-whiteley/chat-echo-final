@@ -34,8 +34,7 @@ const useStyles = makeStyles((theme) => ({
 	footer: {
 	  padding: theme.spacing(3, 2),
 	  marginTop: 'auto',
-	  backgroundColor:
-	    theme.palette.type === 'dark' ? theme.palette.grey[800] : theme.palette.grey[200],
+	  backgroundColor: theme.palette.type === 'dark' ? theme.palette.grey[800] : theme.palette.grey[200],
 	},
 	chatHistory: {
 		height: '100vh'
@@ -57,30 +56,29 @@ export default function Chat() {
 
 	return (
 		<div className={classes.root}>
-    
-    <AppBar position="absolute">
-      <Toolbar className={classes.toolbar}>
-				<Button color="inherit" onClick={openChat}>Add Chat</Button>
-        <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-          An awesome chat app
-        </Typography>
-      </Toolbar>
-    </AppBar>
-    <main className={classes.content}>
-			<div className={classes.appBarSpacer} />
-			<Grid container>
-        <Grid item xs={2}>
-          <Box component="span" className={classes.chatHistory}>
-						<ChatHistory />
-					</Box>
-        </Grid>
-				<Grid item xs={10}>
-          <Box className={classes.chatWindow}>
-						<ChatWindow />
-					</Box>
-        </Grid>
-      </Grid>
-    </main>
-  </div>
+    	<AppBar position="absolute">
+    	  <Toolbar className={classes.toolbar}>
+					<Button color="inherit" onClick={openChat}>Add Chat</Button>
+    	    <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
+    	      An awesome chat app
+    	    </Typography>
+    	  </Toolbar>
+    	</AppBar>
+    	<main className={classes.content}>
+				<div className={classes.appBarSpacer} />
+				<Grid container>
+    	    <Grid item xs={2}>
+    	      <Box component="span" className={classes.chatHistory}>
+							<ChatHistory />
+						</Box>
+    	    </Grid>
+					<Grid item xs={10}>
+    	      <Box className={classes.chatWindow}>
+							<ChatWindow />
+						</Box>
+    	    </Grid>
+    	  </Grid>
+    	</main>
+  	</div>
 	);
 }

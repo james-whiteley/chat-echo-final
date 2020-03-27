@@ -5,9 +5,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 // REDUX
 import { useSelector } from 'react-redux';
-import {
-	selectArray
-} from '../reducers/arraySlice';
+import { selectArray } from '../reducers/arraySlice';
 
 export default function ChatHistory() {
 	const chatHistory = useSelector(selectArray);
